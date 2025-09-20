@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Divisão</title>
+</head>
+<body>
+    <script>
+        let valor1 = parseFloat(prompt("Digite o primeiro valor:"));
+
+        let valor2 = parseFloat(prompt("Digite o segundo valor (maior que 0):"));
+
+        while (valor2 <= 0) {
+          valor2 = parseFloat(prompt("Valor inválido! Digite novamente um valor maior que 0:"));
+        }
+
+        let resultado = valor1 / valor2;
+        alert("Resultado da divisão: " + resultado);
+    </script>
+</body>
+</html>

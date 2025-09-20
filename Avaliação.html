@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Avaliação</title>
+</head>
+<body>
+  <script>
+let totalNotas = 6;
+    let soma = 0;
+
+    for (let i = 1; i <= totalNotas; i++) {
+      let nota = parseFloat(prompt("Digite a nota " + i + " (0 a 10):"));
+
+      // Valida a nota
+      while (nota < 0 || nota > 10 || isNaN(nota)) {
+        nota = parseFloat(prompt("Valor inválido! Digite a nota " + i + " novamente (0 a 10):"));
+      }
+
+      soma += nota;
+    }
+
+    let media = soma / totalNotas;
+    document.write("A média do aluno é: " + media);
+    </script>
+</body>
+</html>

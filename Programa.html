@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Programa</title>
+</head>
+<body>
+  <script>
+    let N = parseInt(prompt("Digite o valor de N para imprimir as tabuadas (maior que 0):"));
+
+    while (N <= 0 || isNaN(N)) {
+      N = parseInt(prompt("Valor inválido! Digite um valor maior que 0:"));
+    }
+
+    for (let i = 1; i <= N; i++) {
+      document.write("<h3>Tabuada do " + i + "</h3>");
+      
+      for (let j = 1; j <= 10; j++) {
+        document.write(i + " x " + j + " = " + (i * j) + "<br>");
+      }
+
+      document.write("<br>"); 
+    }
+    </script>
+</body>
+</html>

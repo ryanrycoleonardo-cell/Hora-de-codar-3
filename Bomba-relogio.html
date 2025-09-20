@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Bomba Relogio</title>
+</head>
+<body>
+    <h1 id="contador">30</h1>
+    <script>
+        let tempo = 30;
+        const display = document.getElementById("contador");
+
+        const timer = setInterval(() => {
+            display.textContent = tempo;
+            if (tempo === 0) {
+                clearInterval(timer);
+                display.textContent = "KABUM MEU PEIXE!";
+            }
+            tempo--;
+        }, 1000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Usuario</title>
+</head>
+<body>
+  <script>
+    let dentro = 0;
+    let fora = 0;
+    let totalValores = 10;
+
+    for (let i = 1; i <= totalValores; i++) {
+      let valor = parseFloat(prompt("Digite o valor " + i + ":"));
+
+      while (isNaN(valor)) {
+        valor = parseFloat(prompt("Valor inválido! Digite o valor " + i + " novamente:"));
+      }
+
+      if (valor >= 24 && valor <= 42) {
+        dentro++;
+      } else {
+        fora++;
+      }
+    }
+
+    document.write("Quantidade de valores dentro do intervalo [24, 42]: " + dentro + "<br>");
+    document.write("Quantidade de valores fora do intervalo [24, 42]: " + fora);
+    </script>
+</body>
+</html>
